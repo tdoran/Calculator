@@ -20,6 +20,18 @@ body{
     font-size: 200%;
 }
 
+.operatorBtn{
+    width: 20%;
+    background-color: purple;
+    padding-bottom: 30%;
+    margin: 1.66%;
+    float: left;
+    border-radius: 15%;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+}
+
 #equals{
     width: 20%;
     background-color: purple;
