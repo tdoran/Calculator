@@ -8,58 +8,10 @@ body{
     max-width: 600px;
 }
 
-.numButton{
+.button{
     width: 20%;
     background-color: purple;
-    padding-bottom: 30%;
-    margin: 1.66%;
-    float: left;
-    border-radius: 15%;
-    text-align: center;
-    color: white;
-    font-size: 200%;
-}
-
-.operatorBtn{
-    width: 20%;
-    background-color: purple;
-    padding-bottom: 30%;
-    margin: 1.66%;
-    float: left;
-    border-radius: 15%;
-    text-align: center;
-    color: white;
-    font-size: 200%;
-}
-
-#equals{
-    width: 20%;
-    background-color: purple;
-    padding-bottom: 30%;
-    margin: 1.66%;
-    float: left;
-    border-radius: 15%;
-    text-align: center;
-    color: white;
-    font-size: 200%;
-}
-
-#reset{
-    width: 20%;
-    background-color: purple;
-    padding-bottom: 30%;
-    margin: 1.66%;
-    float: left;
-    border-radius: 15%;
-    text-align: center;
-    color: white;
-    font-size: 200%;
-}
-
-#delete{
-    width: 20%;
-    background-color: purple;
-    padding-bottom: 30%;
+    padding-bottom: 20%;
     margin: 1.66%;
     float: left;
     border-radius: 15%;
@@ -73,10 +25,12 @@ body{
     height: 100px;
     text-align: right;
     color: white;
+    font-size: 600%;
 }
 #ansDisplay{
-    display:none;
+    display:block;
     height: 100px;
     text-align: right;
     color: white;
+    font-size: 400%;
 }
