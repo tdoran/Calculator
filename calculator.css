@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    background-color: #232323;
+}
+
+#container {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.numButton{
+    width: 20%;
+    background-color: purple;
+    padding-bottom: 30%;
+    margin: 1.66%;
+    float: left;
+    border-radius: 15%;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+}
+
+#equals{
+    width: 20%;
+    background-color: purple;
+    padding-bottom: 30%;
+    margin: 1.66%;
+    float: left;
+    border-radius: 15%;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+}
+
+#reset{
+    width: 20%;
+    background-color: purple;
+    padding-bottom: 30%;
+    margin: 1.66%;
+    float: left;
+    border-radius: 15%;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+}
+
+#delete{
+    width: 20%;
+    background-color: purple;
+    padding-bottom: 30%;
+    margin: 1.66%;
+    float: left;
+    border-radius: 15%;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+}
+
+#numDisplay{
+    display:block;
+    height: 100px;
+    text-align: right;
+    color: white;
+}
+#ansDisplay{
+    display:none;
+    height: 100px;
+    text-align: right;
+    color: white;
+}
