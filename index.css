@@ -25,14 +25,12 @@ body{
 
 #numDisplay{
     display:block;
-    height: 100px;
     text-align: right;
     color: white;
     font-size: 600%;
 }
 #ansDisplay{
     display:block;
-    height: 100px;
     text-align: right;
     color: white;
     font-size: 400%;
