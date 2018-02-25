@@ -5,16 +5,19 @@ body{
 
 #container {
     margin: 20px auto;
-    max-width: 600px;
+    width: 350px;
+    display: grid;
+    /* grid rows and coluns defined*/
+    grid-template:repeat(7, 100px) / repeat(4, 1fr);
+    grid-gap: 3px;
 }
 
 .button{
-    width: 20%;
     background-color: purple;
-    padding-bottom: 20%;
+    /* padding-bottom: 20%; */
     margin: 1.66%;
-    float: left;
-    border-radius: 15%;
+    /* float: left; */
+    /* border-radius: 15%; */
     text-align: center;
     color: white;
     font-size: 200%;
@@ -33,4 +36,25 @@ body{
     text-align: right;
     color: white;
     font-size: 400%;
+}
+
+.numDisplay{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.ansDisplay{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+#equals{
+    grid-column-start: 4;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    padding-top: 100%;
+}
+
+#zero{
+    grid-column-start: 1;
+    grid-column-end: 3;
 }

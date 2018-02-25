@@ -66,19 +66,24 @@ for(var i=0;i<numBtns.length;i++){
 decimalBtn.addEventListener("click", function(){
     ansDisplay.textContent = "";
     var splitDisplay = numDisplay.textContent.split("");
+    console.log(splitDisplay)
     
     if(equalsPressed===false){
         if(numDisplay.textContent==="0"){
             numDisplay.textContent = "0" + this.textContent;
             mySum = mySum + this.textContent;
+            decimalPressed=true;
         }
         else if(decimalPressed===false){
-            if(splitDisplay[splitDisplay.length-1]!==/([1-9])/){
+            if(splitDisplay[splitDisplay.length-1]===/([^1-9])/){
                 numDisplay.textContent = numDisplay.textContent + "0" + this.textContent;
                 mySum = mySum + this.textContent;
+                decimalPressed=true;
+                console.log('trigger')
             }
             else{numDisplay.textContent = numDisplay.textContent + this.textContent;
             mySum = mySum + this.textContent;
+            decimalPressed=true;
             }
 
         }
@@ -86,6 +91,7 @@ decimalBtn.addEventListener("click", function(){
     
     if(equalsPressed===true||numDisplay.textContent==="0"){
             numDisplay.textContent = "0" + this.textContent;
+            mySum= "0."
             equalsPressed=false;
             decimalPressed=true;
             operatorPressed=false;
@@ -93,12 +99,14 @@ decimalBtn.addEventListener("click", function(){
     }
 });
 
+
 //Add click listeners to operators (excluding equals)//
 for(var i=0;i<operatorBtns.length;i++){
 
     //multiply button//
     if(operatorBtns[i].textContent==="x"){
             operatorBtns[i].addEventListener("click", function(){
+                
                 if(operatorPressed===false){
                     ansDisplay.textContent="";
                     numDisplay.textContent = numDisplay.textContent + "x";
@@ -108,6 +116,16 @@ for(var i=0;i<operatorBtns.length;i++){
                     decimalPressed=false;
                     console.log(mySum);
                     }
+                else{
+                    var splitDisplay=numDisplay.textContent.split("");
+                    var splitSum=mySum.split("");
+                    splitDisplay.pop();
+                    splitDisplay.push(this.textContent);
+                    numDisplay.textContent=splitDisplay.join("");
+                    splitSum.pop();
+                    splitSum.push("*");
+                    mySum=splitSum.join("");
+                }
                 });
     }
 
@@ -122,6 +140,16 @@ for(var i=0;i<operatorBtns.length;i++){
                 operatorPressed=true;
                 decimalPressed=false;
                 console.log(mySum);
+                }
+                else{
+                    var splitDisplay=numDisplay.textContent.split("");
+                    var splitSum=mySum.split("");
+                    splitDisplay.pop();
+                    splitDisplay.push(this.textContent);
+                    numDisplay.textContent=splitDisplay.join("");
+                    splitSum.pop();
+                    splitSum.push("/");
+                    mySum=splitSum.join("");
                 }
             });
     }  
@@ -138,6 +166,16 @@ for(var i=0;i<operatorBtns.length;i++){
             operatorPressed=true;
             decimalPressed=false;
             console.log(mySum);
+        }
+        else{
+            var splitDisplay=numDisplay.textContent.split("");
+            var splitSum=mySum.split("");
+            splitDisplay.pop();
+            splitDisplay.push(this.textContent);
+            numDisplay.textContent=splitDisplay.join("");
+            splitSum.pop();
+            splitSum.push(this.textContent);
+            mySum=splitSum.join("");
         }
         });
     }      
@@ -182,7 +220,7 @@ deleteBtn.addEventListener("click", function(){
             ||splitDisplay[splitDisplay.length-1]==="-"
             ||splitDisplay[splitDisplay.length-1]==="x"
             ||splitDisplay[splitDisplay.length-1]==="÷"){
-                decimalPressed=false;
+            operatorPressed=false;
             }
         console.log(splitDisplay);
         splitDisplay.pop();
